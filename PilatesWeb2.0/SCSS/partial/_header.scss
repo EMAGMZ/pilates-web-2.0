@@ -1,117 +1,156 @@
 // =============================================
-// HEADER — HERO
+// SECCIÓN CLASES — mobile first
 // =============================================
+@use 'variables' as v;
 
-.hero-section {
-    position: relative;
-    height: 100vh;
-    min-height: 580px;
-    background: url('../img/hero.jpg') center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.clases-seccion {
+    @extend %seccion-base;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(26, 26, 26, 0.42);
-}
-
-.hero-contenido {
-    position: relative;
-    z-index: 2;
+.clases-header {
     text-align: center;
-    color: var(--blanco);
-    padding: 0 20px;
-    max-width: 720px;
+    margin-bottom: 36px; // mobile
 
-    // Animación entrada — heredada del proyecto dental
-    animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-
-    .hero-etiqueta {
-        display: inline-block;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.7rem;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        color: var(--nude-claro);
-        border-bottom: 1px solid var(--nude-claro);
-        padding-bottom: 4px;
-        margin-bottom: 24px;
+    @media (min-width: v.$tablet) {
+        margin-bottom: 56px;
     }
 
-    h1 {
+    h2 {
         font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        font-size: 2rem; // mobile
         font-weight: 400;
-        line-height: 1.1;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
+        color: var(--oscuro);
+        margin-bottom: 12px;
+
+        @media (min-width: v.$tablet) {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: v.$desktop) {
+            font-size: 3rem;
+        }
     }
 
     p {
-        font-family: 'DM Sans', sans-serif;
-        font-size: clamp(1rem, 2vw, 1.15rem);
-        color: rgba(255, 255, 255, 0.85);
-        margin-bottom: 36px;
+        @include v.fuente-body(0.9rem);
+        color: var(--gris-texto);
+        max-width: 480px;
+        margin: 0 auto;
         line-height: 1.7;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    .hero-btns {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
+        @media (min-width: v.$tablet) {
+            font-size: 1rem;
+        }
     }
 }
 
-@keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.3em;
-        opacity: 0;
+.clases-grid {
+    display: grid;
+    grid-template-columns: 1fr; // mobile: 1 columna
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: v.$tablet) {
+        grid-template-columns: repeat(2, 1fr); // tablet: 2 columnas
+        gap: 24px;
     }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
+
+    @media (min-width: v.$desktop) {
+        grid-template-columns: repeat(3, 1fr); // desktop: 3 columnas
     }
 }
 
-// Indicador scroll
-.hero-scroll {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255,255,255,0.5);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.clase-card {
+    @include v.tarjeta(16px);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 36px rgba(61, 90, 71, 0.15);
+
+        .clase-card-img img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.clase-card-img {
+    height: 200px; // mobile
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: v.$tablet) {
+        height: 240px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+    }
 
     &::after {
         content: '';
-        display: block;
-        width: 1px;
-        height: 40px;
-        background: rgba(255,255,255,0.3);
-        animation: scroll-line 1.8s ease-in-out infinite;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent 50%, rgba(26, 26, 26, 0.35) 100%);
     }
 }
 
-@keyframes scroll-line {
-    0%   { transform: scaleY(0); transform-origin: top; }
-    50%  { transform: scaleY(1); transform-origin: top; }
-    51%  { transform: scaleY(1); transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; }
+.clase-card-etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--verde-bosque);
+    color: var(--blanco);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.clase-card-texto {
+    padding: 20px; // mobile
+
+    @media (min-width: v.$tablet) {
+        padding: 24px;
+    }
+
+    h3 {
+        @include v.fuente-display(1.3rem, 600, 0.3px);
+        color: var(--oscuro);
+        margin-bottom: 8px;
+    }
+
+    p {
+        @include v.fuente-body(0.88rem);
+        color: var(--gris-texto);
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .clase-link {
+        @include v.fuente-body(0.75rem, 500);
+        color: var(--verde-bosque);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-bottom: 1px solid var(--verde-bosque);
+        padding-bottom: 2px;
+        transition: color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+            color: var(--nude);
+            border-color: var(--nude);
+        }
+    }
 }

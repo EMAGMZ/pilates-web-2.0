@@ -1,0 +1,109 @@
+// =============================================
+// INSCRIPCIÓN / TURNOS — mobile first
+// =============================================
+@use 'variables' as v;
+
+.contInscripcion {
+    background-color: var(--marfil);
+    padding: 60px 16px; // mobile
+    max-width: 700px;
+    margin: 0 auto;
+
+    @media (min-width: v.$tablet) {
+        padding: 80px 20px;
+    }
+
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem; // mobile
+        font-weight: 400;
+        color: var(--oscuro);
+        margin-bottom: 32px;
+        text-align: center;
+
+        @media (min-width: v.$tablet) {
+            font-size: 2.8rem;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.formPilates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--oscuro);
+
+        span {
+            color: var(--gris-texto);
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+    }
+
+    input,
+    select,
+    textarea {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.95rem;
+        color: var(--oscuro);
+        background-color: var(--blanco);
+        border: 1px solid var(--marfil-oscuro);
+        border-radius: 8px;
+        padding: 12px 16px;
+        width: 100%;
+        transition: border-color 0.3s ease;
+        -webkit-appearance: none; // evita estilos nativos en iOS
+
+        &:focus {
+            outline: none;
+            border-color: var(--verde-bosque);
+        }
+
+        &::placeholder {
+            color: #aaa;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%233d5a47' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        background-size: 14px;
+        padding-right: 40px;
+        cursor: pointer;
+    }
+}
+
+.formPilates button[type="submit"] {
+    @include v.boton(#3d5a47, #ffffff);
+    width: 100%; // mobile: botón full width
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+
+    @media (min-width: v.$tablet) {
+        width: auto; // tablet+: solo el ancho del texto
+        align-self: flex-start;
+    }
+}

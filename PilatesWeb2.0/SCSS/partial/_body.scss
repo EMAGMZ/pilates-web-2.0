@@ -1,6 +1,7 @@
 // =============================================
-// BODY & RESET
+// BODY & RESET — mobile first
 // =============================================
+@use 'variables' as v;
 
 * {
     margin: 0;
@@ -16,14 +17,17 @@ body {
     background-color: var(--marfil);
     color: var(--oscuro);
     font-family: 'DM Sans', sans-serif;
-    padding-top: 72px; // altura navbar fija
+    padding-top: 62px; // mobile: navbar más chica
+
+    @media (min-width: v.$tablet) {
+        padding-top: 72px;
+    }
 }
 
 main {
     background-color: var(--marfil);
 }
 
-// Etiqueta reutilizable en todo el proyecto
 .etiqueta {
     display: inline-block;
     font-family: 'DM Sans', sans-serif;
@@ -36,21 +40,29 @@ main {
     margin-bottom: 16px;
 }
 
-// Botón flotante WhatsApp
 .whatsapp-float {
     position: fixed;
-    right: 20px;
-    bottom: 30px;
+    right: 16px;
+    bottom: 20px; // mobile: más abajo
     z-index: 1000;
-    width: fit-content;
+
+    @media (min-width: v.$tablet) {
+        right: 20px;
+        bottom: 30px;
+    }
 
     img {
-        width: 52px;
-        height: 52px;
+        width: 48px; // mobile: un poco más chico
+        height: 48px;
         object-fit: contain;
         display: block;
         filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
         transition: transform 0.3s ease;
+
+        @media (min-width: v.$tablet) {
+            width: 52px;
+            height: 52px;
+        }
 
         &:hover {
             transform: scale(1.1);
