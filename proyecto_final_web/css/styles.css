@@ -1,0 +1,10 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#ffffff}
+.miNav{display:flex;justify-content:center;align-items:center;gap:20px;background:#ffffff}
+.miNav a{color:#1a3c5e}
+.miNav a:hover{color:#c9a84c}
+.titulosTextos{display:flex;justify-content:center;align-items:center;flex-direction:column}
+.titulosTextos h1{color:#1a3c5e}
+.porque-grid{display:grid;grid-template-columns:1fr}
+@media(min-width:768px){.porque-grid{grid-template-columns:1fr 1fr}}
+footer{background:#111;color:white;text-align:center}

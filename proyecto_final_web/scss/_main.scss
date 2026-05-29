@@ -1,0 +1,18 @@
+.titulosTextos {
+  @include flex-center;
+  flex-direction: column;
+
+  h1 {
+    @extend %titulo-base;
+    color:$azul-oscuro;
+  }
+}
+
+.porque-grid {
+  display:grid;
+  grid-template-columns:1fr;
+
+  @media(min-width:768px){
+    grid-template-columns:1fr 1fr;
+  }
+}

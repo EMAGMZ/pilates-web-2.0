@@ -1,0 +1,11 @@
+.miNav {
+  @include flex-center;
+  gap:20px;
+  background:$blanco;
+
+  a {
+    color:$azul-oscuro;
+
+    &:hover {color:$dorado;}
+  }
+}

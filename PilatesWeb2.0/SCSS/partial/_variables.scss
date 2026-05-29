@@ -1,0 +1,91 @@
+// =============================================
+// PILATES STUDIO — JIMENA MONZON
+// Variables y Design System
+// =============================================
+
+// == COLORES ==
+:root {
+    --verde-bosque:   #3d5a47;
+    --verde-medio:    #4e7260;
+    --nude:           #c8b59e;
+    --nude-claro:     #ddd0c0;
+    --marfil:         #f2ede6;
+    --marfil-oscuro:  #e8e0d5;
+    --oscuro:         #1a1a1a;
+    --gris-texto:     #5a5a5a;
+    --blanco:         #ffffff;
+}
+
+// == FUENTES ==
+// Display: Cormorant Garamond (elegante, serif)
+// Body:    DM Sans (limpio, legible)
+
+// == MIXINS ==
+
+@mixin fuente-display($size: 1rem, $weight: 400, $spacing: 0px) {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+}
+
+@mixin fuente-body($size: 1rem, $weight: 400) {
+    font-family: 'DM Sans', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin flex-centro($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin boton($bg: #3d5a47, $color: #ffffff) {
+    display: inline-block;
+    background-color: $bg;
+    color: $color;
+    text-decoration: none;
+    padding: 13px 32px;
+    border-radius: 40px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: #c8b59e;
+        color: #1a1a1a;
+        transform: translateY(-2px);
+    }
+}
+
+@mixin tarjeta($radio: 16px) {
+    background-color: var(--blanco);
+    border-radius: $radio;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(61, 90, 71, 0.10);
+}
+
+// == EXTENDS ==
+
+%seccion-base {
+    background-color: var(--marfil);
+    padding: 80px 20px;
+}
+
+%etiqueta {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--verde-bosque);
+    border-bottom: 1px solid var(--verde-bosque);
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+}

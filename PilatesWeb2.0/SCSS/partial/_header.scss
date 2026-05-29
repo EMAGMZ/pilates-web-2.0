@@ -1,0 +1,117 @@
+// =============================================
+// HEADER — HERO
+// =============================================
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 580px;
+    background: url('../img/hero.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.42);
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--blanco);
+    padding: 0 20px;
+    max-width: 720px;
+
+    // Animación entrada — heredada del proyecto dental
+    animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+    .hero-etiqueta {
+        display: inline-block;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: var(--nude-claro);
+        border-bottom: 1px solid var(--nude-claro);
+        padding-bottom: 4px;
+        margin-bottom: 24px;
+    }
+
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-family: 'DM Sans', sans-serif;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 36px;
+        line-height: 1.7;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-btns {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.3em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// Indicador scroll
+.hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 40px;
+        background: rgba(255,255,255,0.3);
+        animation: scroll-line 1.8s ease-in-out infinite;
+    }
+}
+
+@keyframes scroll-line {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    51%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}
