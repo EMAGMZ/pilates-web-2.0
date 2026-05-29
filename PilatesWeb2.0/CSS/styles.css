@@ -141,10 +141,11 @@ main {
   position: relative;
   height: 100vh;
   min-height: 580px;
-  background: url("../img/hero.jpg") center center/cover no-repeat;
+  background: url("../img/jimeAlumna2.png") center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50%;
 }
 
 .hero-overlay {
@@ -686,3 +687,136 @@ footer {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+/* ============================================= CONTACTO
+   ============================================= */
+
+body .card {
+    width: 90%;
+    max-width: 340px;
+    background-color: #E6D3C3;
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 60px auto;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 1);
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.fotoPerfil img {
+    border: solid 10px #8B6F5A;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.description h3 {
+    font-size: 22px;
+    color: #3B2F2F;
+    margin-bottom: 0;
+}
+
+.description h4 {
+    font-size: 16px;
+    color: #8B6F5A;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 14px;
+    color: #3B2F2F;
+}
+
+.qr img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.contac {
+    margin-top: 20px;
+}
+
+.contac a {
+    text-decoration: none;
+    background-color: #8B6F5A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.contac a:hover {
+    background-color: #3B2F2F;
+}
+
+/* ============================================= INSCRIPCION
+   ============================================= */
+
+.contInscripcion {
+    text-align: center;
+    padding: 10px;
+}
+
+.contInscripcion h1 {
+    font-size: 28px;
+    color: #3B2F2F;
+    margin-bottom: 20px;
+}
+
+.formPilates {
+    background-color: #e6d3c3;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.formPilates label {
+    display: block;
+    margin-top: 15px;
+    color: #3B2F2F;
+}
+
+.formPilates input,
+.formPilates select,
+.formPilates textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cca384;
+    border-radius: 5px;
+}
+
+.formPilates textarea {
+    height: 100px;
+}
+
+.formPilates button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #8B6F5A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.formPilates button:hover {
+    background-color: #3B2F2F;
+}
