@@ -1,0 +1,71 @@
+// =============================================
+// BODY & RESET — mobile first
+// =============================================
+@use 'variables' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--marfil);
+    color: var(--oscuro);
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 62px; // mobile: navbar más chica
+
+    @media (min-width: v.$tablet) {
+        padding-top: 72px;
+    }
+}
+
+main {
+    background-color: var(--marfil);
+}
+
+.etiqueta {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--verde-bosque);
+    border-bottom: 1px solid var(--verde-bosque);
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 16px;
+    bottom: 20px; // mobile: más abajo
+    z-index: 1000;
+
+    @media (min-width: v.$tablet) {
+        right: 20px;
+        bottom: 30px;
+    }
+
+    img {
+        width: 48px; // mobile: un poco más chico
+        height: 48px;
+        object-fit: contain;
+        display: block;
+        filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+        transition: transform 0.3s ease;
+
+        @media (min-width: v.$tablet) {
+            width: 52px;
+            height: 52px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

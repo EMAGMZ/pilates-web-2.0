@@ -1,0 +1,17 @@
+# SCSS source maps
+*.css.map
+*.scss.map
+
+# Node (si se usa node-sass)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Sass cache
+.sass-cache/

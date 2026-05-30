@@ -1,0 +1,139 @@
+// =============================================
+// HEADER — HERO — mobile first
+// =============================================
+
+.hero-section {
+    position: relative;
+    height: 100svh;
+    min-height: 500px;
+    background: url('../img/jimeAlumna2.png') center 30% / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+        min-height: 580px;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.42);
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    max-width: 720px;
+    animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+    .hero-etiqueta {
+        display: inline-block;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.65rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #ddd0c0;
+        border-bottom: 1px solid #ddd0c0;
+        padding-bottom: 4px;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            margin-bottom: 24px;
+        }
+    }
+
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.6rem;
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: 16px;
+
+        @media (min-width: 768px) {
+            font-size: 4rem;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 5.5rem;
+        }
+    }
+
+    p {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 28px;
+        line-height: 1.7;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 768px) {
+            font-size: 1.1rem;
+            margin-bottom: 36px;
+        }
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+}
+
+@keyframes tracking-in-expand {
+    0%   { letter-spacing: -0.3em; opacity: 0; }
+    40%  { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.hero-scroll {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255,255,255,0.5);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.3);
+            animation: scroll-line 1.8s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes scroll-line {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    51%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}
