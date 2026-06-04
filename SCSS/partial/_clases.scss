@@ -4,7 +4,38 @@
 @use 'variables' as v;
 
 .clases-seccion {
-    @extend %seccion-base;
+    position: relative;
+    padding: 60px 16px;
+    background: url('/img/fondoclass.jpg') center center / cover no-repeat;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: linear-gradient(to bottom, rgba(26, 26, 26, 0.35), transparent);
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(245, 240, 235, 0.50);
+        z-index: 0;
+    }
+
+    .clases-header,
+    .clases-grid {
+        position: relative;
+        z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+        padding: 80px 20px;
+    }
 }
 
 .clases-header {
@@ -63,7 +94,6 @@
         transition: transform 0.5s ease;
     }
 
-    // Overlay degradado en la imagen
     &::after {
         content: '';
         position: absolute;
@@ -126,7 +156,6 @@
     }
 }
 
-// Responsive
 @media (max-width: 600px) {
     .clases-grid {
         grid-template-columns: 1fr;

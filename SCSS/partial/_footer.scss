@@ -4,7 +4,7 @@
 @use 'variables' as v;
 
 footer {
-    background-color: #111a14;
+    background-color: #1a1410;
     color: var(--blanco);
     padding: 40px 16px 0; // mobile
 
@@ -120,5 +120,14 @@ footer {
         font-size: 0.72rem;
         color: rgba(255, 255, 255, 0.3);
         letter-spacing: 0.5px;
+    }
+
+    a {
+        color: var(--nude);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

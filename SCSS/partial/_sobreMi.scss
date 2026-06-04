@@ -4,46 +4,45 @@
 @use 'variables' as v;
 
 // --- SOBRE MÍ PREVIEW ---
-
 .sobre-preview {
     background-color: var(--oscuro);
-    padding: 60px 16px; // mobile
-
-    @media (min-width: v.$tablet) {
+    padding: 60px 16px;
+ 
+    @media (min-width: 768px) {
         padding: 80px 20px;
     }
 }
-
+ 
 .sobre-preview-container {
     display: grid;
-    grid-template-columns: 1fr; // mobile: apilado
+    grid-template-columns: 1fr;
     gap: 36px;
     max-width: 1100px;
     margin: 0 auto;
     align-items: center;
-
-    @media (min-width: v.$tablet) {
-        grid-template-columns: 1fr 1fr; // tablet+: lado a lado
+ 
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
         gap: 48px;
     }
 }
-
+ 
 .sobre-preview-img {
     position: relative;
-
+ 
     img {
         width: 100%;
-        height: 320px; // mobile
+        height: 320px;
         object-fit: cover;
         object-position: top center;
         border-radius: 12px;
         display: block;
-
-        @media (min-width: v.$tablet) {
+ 
+        @media (min-width: 768px) {
             height: 480px;
         }
     }
-
+ 
     &::before {
         content: '';
         position: absolute;
@@ -57,156 +56,163 @@
         opacity: 0.5;
     }
 }
-
+ 
 .sobre-preview-texto {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
-    @media (min-width: v.$tablet) {
+ 
+    @media (min-width: 768px) {
         gap: 18px;
     }
-
+ 
     .etiqueta {
         color: var(--nude);
         border-color: var(--nude);
     }
-
+ 
     h2 {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem; // mobile
+        font-size: 2rem;
         font-weight: 400;
         color: var(--blanco);
         line-height: 1.2;
-
-        @media (min-width: v.$tablet) {
+ 
+        @media (min-width: 768px) {
             font-size: 2.4rem;
         }
-
-        @media (min-width: v.$desktop) {
+ 
+        @media (min-width: 1200px) {
             font-size: 2.8rem;
         }
     }
-
+ 
     p {
-        @include v.fuente-body(0.9rem);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.9rem;
         color: rgba(255, 255, 255, 0.65);
         line-height: 1.8;
-
-        @media (min-width: v.$tablet) {
+ 
+        @media (min-width: 768px) {
             font-size: 0.95rem;
         }
     }
 }
-
-// --- POR QUÉ ELEGIRNOS ---
-
+ 
+// --- POR QUÉ ELEGIRNOS — rediseño elegante oscuro ---
+ 
 .porque {
-    background-color: var(--verde-bosque);
-    padding: 60px 16px; // mobile
-
-    @media (min-width: v.$tablet) {
-        padding: 80px 20px;
+    background-color: #1a1410;
+    padding: 80px 16px;
+    border-top: 1px solid rgba(186, 155, 129, 0.15);
+ 
+    @media (min-width: 768px) {
+        padding: 100px 20px;
     }
 }
-
+ 
 .porque-grid {
     display: grid;
-    grid-template-columns: 1fr; // mobile: apilado
-    gap: 36px;
+    grid-template-columns: 1fr;
+    gap: 60px;
     max-width: 1100px;
     margin: 0 auto;
-
-    @media (min-width: v.$tablet) {
-        grid-template-columns: 1fr 1.4fr;
-        gap: 48px;
+ 
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1.6fr;
+        gap: 80px;
         align-items: start;
     }
 }
-
+ 
 .porque-texto {
     .etiqueta {
-        color: var(--nude-claro);
-        border-color: var(--nude-claro);
+        color: var(--nude);
+        border-color: var(--nude);
+        opacity: 0.7;
     }
-
+ 
     h2 {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 1.8rem; // mobile
-        font-weight: 400;
+        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        font-weight: 300;
         color: var(--blanco);
-        line-height: 1.25;
-
-        @media (min-width: v.$tablet) {
-            font-size: 2.2rem;
-        }
-
-        @media (min-width: v.$desktop) {
-            font-size: 2.5rem;
-        }
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+        margin-top: 8px;
     }
 }
-
+ 
 .porque-items {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-
-    @media (min-width: v.$tablet) {
-        gap: 28px;
-    }
+    gap: 0;
 }
-
+ 
 .porque-item {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(186, 155, 129, 0.12);
+    transition: background-color 0.3s ease;
+ 
+    &:first-child {
+        border-top: 1px solid rgba(186, 155, 129, 0.12);
+    }
+ 
     &:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
+        border-bottom: 1px solid rgba(186, 155, 129, 0.12);
     }
-
+ 
+    &:hover {
+        .porque-icono {
+            color: var(--nude);
+        }
+    }
+ 
     h4 {
-        @include v.fuente-display(1.2rem, 600);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.4rem;
+        font-weight: 400;
         color: var(--blanco);
-        margin-bottom: 6px;
-
-        @media (min-width: v.$tablet) {
-            font-size: 1.3rem;
+        margin-bottom: 8px;
+        letter-spacing: 0.3px;
+ 
+        @media (min-width: 768px) {
+            font-size: 1.6rem;
         }
     }
-
+ 
     p {
-        @include v.fuente-body(0.88rem);
-        color: rgba(255, 255, 255, 0.6);
-        line-height: 1.7;
-
-        @media (min-width: v.$tablet) {
-            font-size: 0.9rem;
-        }
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.8;
     }
 }
-
+ 
 .porque-icono {
-    color: var(--nude);
-    font-size: 1rem;
-    margin-top: 4px;
-    flex-shrink: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(186, 155, 129, 0.4);
+    padding-top: 6px;
+    transition: color 0.3s ease;
+    text-align: center;
 }
-
+ 
 // Botones
-.btn-primario  { @include v.boton(#c8b59e, #1a1a1a); }
-.btn-verde     { @include v.boton(#3d5a47, #ffffff); }
-
+.btn-primario  { @include v.boton(#BA9B81, #ffffff); }
+.btn-verde     { @include v.boton(#54473C, #ffffff); }
+ 
 .btn-secundario {
     @include v.boton(transparent, #ffffff);
     border: 1px solid rgba(255,255,255,0.5);
-
+ 
     &:hover {
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(186, 155, 129, 0.2);
         color: var(--blanco);
     }
 }

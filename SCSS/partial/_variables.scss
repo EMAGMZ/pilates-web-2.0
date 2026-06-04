@@ -5,17 +5,16 @@
 
 // == COLORES ==
 :root {
-    --verde-bosque:   #3d5a47;
-    --verde-medio:    #4e7260;
-    --nude:           #c8b59e;
-    --nude-claro:     #ddd0c0;
-    --marfil:         #f2ede6;
-    --marfil-oscuro:  #e8e0d5;
-    --oscuro:         #1a1a1a;
-    --gris-texto:     #5a5a5a;
+    --verde-bosque:   #54473C;
+    --verde-medio:    #877F78;
+    --nude:           #BA9B81;
+    --nude-claro:     #d4bba6;
+    --marfil:         #f5f0eb;
+    --marfil-oscuro:  #e8e0d8;
+    --oscuro:         #33251A;
+    --gris-texto:     #54473C;
     --blanco:         #ffffff;
 }
-
 // == BREAKPOINTS — mobile first ==
 $tablet:  768px;
 $desktop: 1200px;
