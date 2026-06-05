@@ -17,10 +17,10 @@ body {
     background-color: var(--marfil);
     color: var(--oscuro);
     font-family: 'DM Sans', sans-serif;
-    padding-top: 62px; // mobile: navbar más chica
+    padding-top: 0px; // mobile: navbar más chica
 
     @media (min-width: v.$tablet) {
-        padding-top: 72px;
+        padding-top: 0px;
     }
 }
 
