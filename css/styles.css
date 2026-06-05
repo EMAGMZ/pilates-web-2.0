@@ -407,8 +407,8 @@ main {
 .clases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
+  gap: 70px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -423,14 +423,17 @@ main {
 }
 .clase-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 36px rgba(61, 90, 71, 0.15);
+  box-shadow: 0 8px 24px rgb(51, 37, 26);
 }
 .clase-card:hover .clase-card-img img {
   transform: scale(1.05);
 }
+.clase-card {
+  box-shadow: 0 8px 24px rgb(51, 37, 26);
+}
 
 .clase-card-img {
-  height: 240px;
+  height: 340px;
   overflow: hidden;
   position: relative;
 }
@@ -506,7 +509,7 @@ main {
     grid-template-columns: 1fr;
   }
   .clase-card-img {
-    height: 200px;
+    height: 400px;
   }
 }
 :root {
@@ -551,7 +554,7 @@ main {
 }
 .sobre-preview-img img {
   width: 100%;
-  height: 320px;
+  height: 620px;
   object-fit: cover;
   object-position: top center;
   border-radius: 12px;
@@ -715,7 +718,7 @@ main {
 
 .btn-primario {
   display: inline-block;
-  background-color: #BA9B81;
+  background-color: #ba9b81;
   color: #ffffff;
   text-decoration: none;
   padding: 13px 32px;
@@ -735,7 +738,7 @@ main {
 
 .btn-verde {
   display: inline-block;
-  background-color: #54473C;
+  background-color: #54473c;
   color: #ffffff;
   text-decoration: none;
   padding: 13px 32px;

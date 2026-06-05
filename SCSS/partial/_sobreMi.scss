@@ -1,218 +1,222 @@
 // =============================================
 // SOBRE MÍ + POR QUÉ — mobile first
 // =============================================
-@use 'variables' as v;
+@use "variables" as v;
 
 // --- SOBRE MÍ PREVIEW ---
 .sobre-preview {
-    background-color: var(--oscuro);
-    padding: 60px 16px;
- 
-    @media (min-width: 768px) {
-        padding: 80px 20px;
-    }
+  background-color: var(--oscuro);
+  padding: 60px 16px;
+
+  @media (min-width: 768px) {
+    padding: 80px 20px;
+  }
 }
- 
+
 .sobre-preview-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 36px;
-    max-width: 1100px;
-    margin: 0 auto;
-    align-items: center;
- 
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
-    }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
 }
- 
+
 .sobre-preview-img {
-    position: relative;
- 
-    img {
-        width: 100%;
-        height: 320px;
-        object-fit: cover;
-        object-position: top center;
-        border-radius: 12px;
-        display: block;
- 
-        @media (min-width: 768px) {
-            height: 480px;
-        }
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    display: block;
+
+    @media (min-width: 768px) {
+      height: 480px;
     }
- 
-    &::before {
-        content: '';
-        position: absolute;
-        top: -12px;
-        left: -12px;
-        width: 60%;
-        height: 60%;
-        border-top: 1px solid var(--nude);
-        border-left: 1px solid var(--nude);
-        border-radius: 4px 0 0 0;
-        opacity: 0.5;
-    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 60%;
+    height: 60%;
+    border-top: 1px solid var(--nude);
+    border-left: 1px solid var(--nude);
+    border-radius: 4px 0 0 0;
+    opacity: 0.5;
+  }
 }
- 
+
 .sobre-preview-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
- 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    gap: 18px;
+  }
+
+  .etiqueta {
+    color: var(--nude);
+    border-color: var(--nude);
+}
+
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--blanco);
+    line-height: 1.2;
+
     @media (min-width: 768px) {
-        gap: 18px;
+    font-size: 2.4rem;
     }
- 
-    .etiqueta {
-        color: var(--nude);
-        border-color: var(--nude);
-    }
- 
-    h2 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        font-weight: 400;
-        color: var(--blanco);
-        line-height: 1.2;
- 
-        @media (min-width: 768px) {
-            font-size: 2.4rem;
-        }
- 
-        @media (min-width: 1200px) {
-            font-size: 2.8rem;
-        }
-    }
- 
-    p {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.65);
-        line-height: 1.8;
- 
-        @media (min-width: 768px) {
-            font-size: 0.95rem;
-        }
+
+    @media (min-width: 1200px) {
+    font-size: 2.8rem;
     }
 }
- 
+
+p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.8;
+
+    @media (min-width: 768px) {
+    font-size: 0.95rem;
+    }
+}
+}
+
 // --- POR QUÉ ELEGIRNOS — rediseño elegante oscuro ---
- 
+
 .porque {
-    background-color: #1a1410;
-    padding: 80px 16px;
-    border-top: 1px solid rgba(186, 155, 129, 0.15);
- 
-    @media (min-width: 768px) {
-        padding: 100px 20px;
-    }
+background-color: #1a1410;
+padding: 80px 16px;
+border-top: 1px solid rgba(186, 155, 129, 0.15);
+
+@media (min-width: 768px) {
+    padding: 100px 20px;
 }
- 
+}
+
 .porque-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 60px;
-    max-width: 1100px;
-    margin: 0 auto;
- 
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr 1.6fr;
-        gap: 80px;
-        align-items: start;
-    }
-}
- 
-.porque-texto {
-    .etiqueta {
-        color: var(--nude);
-        border-color: var(--nude);
-        opacity: 0.7;
-    }
- 
-    h2 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(2.2rem, 5vw, 3.8rem);
-        font-weight: 300;
-        color: var(--blanco);
-        line-height: 1.1;
-        letter-spacing: -0.5px;
-        margin-top: 8px;
-    }
-}
- 
-.porque-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
- 
-.porque-item {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    gap: 20px;
+display: grid;
+grid-template-columns: 1fr;
+gap: 60px;
+max-width: 1100px;
+ margin: 0 auto;
+
+@media (min-width: 768px) {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
     align-items: start;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(186, 155, 129, 0.12);
-    transition: background-color 0.3s ease;
- 
-    &:first-child {
-        border-top: 1px solid rgba(186, 155, 129, 0.12);
-    }
- 
-    &:last-child {
-        border-bottom: 1px solid rgba(186, 155, 129, 0.12);
-    }
- 
-    &:hover {
-        .porque-icono {
-            color: var(--nude);
-        }
-    }
- 
-    h4 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: var(--blanco);
-        margin-bottom: 8px;
-        letter-spacing: 0.3px;
- 
-        @media (min-width: 768px) {
-            font-size: 1.6rem;
-        }
-    }
- 
-    p {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.45);
-        line-height: 1.8;
-    }
 }
- 
-.porque-icono {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+}
+
+.porque-texto {
+.etiqueta {
+    color: var(--nude);
+    border-color: var(--nude);
+    opacity: 0.7;
+}
+
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
     font-weight: 300;
-    color: rgba(186, 155, 129, 0.4);
-    padding-top: 6px;
-    transition: color 0.3s ease;
-    text-align: center;
+    color: var(--blanco);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-top: 8px;
 }
- 
-// Botones
-.btn-primario  { @include v.boton(#BA9B81, #ffffff); }
-.btn-verde     { @include v.boton(#54473C, #ffffff); }
- 
-.btn-secundario {
-    @include v.boton(transparent, #ffffff);
-    border: 1px solid rgba(255,255,255,0.5);
- 
-    &:hover {
-        background-color: rgba(186, 155, 129, 0.2);
-        color: var(--blanco);
+}
+
+.porque-items {
+display: flex;
+flex-direction: column;
+gap: 0;
+}
+
+.porque-item {
+display: grid;
+grid-template-columns: 48px 1fr;
+gap: 20px;
+align-items: start;
+padding: 28px 0;
+border-bottom: 1px solid rgba(186, 155, 129, 0.12);
+transition: background-color 0.3s ease;
+
+&:first-child {
+    border-top: 1px solid rgba(186, 155, 129, 0.12);
+}
+
+&:last-child {
+    border-bottom: 1px solid rgba(186, 155, 129, 0.12);
+}
+
+&:hover {
+    .porque-icono {
+    color: var(--nude);
     }
+}
+
+h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--blanco);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+
+    @media (min-width: 768px) {
+    font-size: 1.6rem;
+    }
+}
+
+  p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.8;
+  }
+}
+
+.porque-icono {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(186, 155, 129, 0.4);
+  padding-top: 6px;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+// Botones
+.btn-primario {
+  @include v.boton(#ba9b81, #ffffff);
+}
+.btn-verde {
+  @include v.boton(#54473c, #ffffff);
+}
+
+.btn-secundario {
+  @include v.boton(transparent, #ffffff);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    background-color: rgba(186, 155, 129, 0.2);
+    color: var(--blanco);
+  }
 }
