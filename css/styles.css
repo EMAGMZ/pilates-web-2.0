@@ -1238,4 +1238,116 @@ footer {
   color: #ffffff;
 }
 
+.beneficios-seccion {
+  background-color: #54473C;
+  padding: 80px 0 100px;
+  overflow: hidden;
+}
+
+.beneficios-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 20px;
+}
+.beneficios-header .etiqueta {
+  color: var(--nude);
+  border-color: var(--nude);
+}
+.beneficios-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  color: var(--blanco);
+  margin-top: 8px;
+}
+
+.beneficios-swiper {
+  width: 100%;
+  padding: 20px 0 40px !important;
+}
+@media (min-width: 1200px) {
+  .beneficios-swiper {
+    padding: 20px 100px 40px !important;
+  }
+}
+
+.beneficio-slide {
+  width: 320px !important;
+  height: 440px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+@media (min-width: 768px) {
+  .beneficio-slide {
+    width: 380px !important;
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .beneficio-slide {
+    width: 720px !important;
+    height: 720px;
+  }
+}
+.beneficio-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+  transition: filter 0.2s ease;
+}
+.beneficio-slide.swiper-slide-active img {
+  filter: brightness(1);
+}
+.beneficio-slide.swiper-slide-active .beneficio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficio-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px 28px;
+  background: linear-gradient(to bottom, transparent 20%, rgba(26, 20, 16, 0.85) 100%);
+  opacity: 0.8;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.beneficio-overlay h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.beneficio-overlay p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+}
+
+.beneficios-prev,
+.beneficios-next {
+  color: var(--nude) !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.beneficios-prev::after,
+.beneficios-next::after {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+}
+.beneficios-prev:hover,
+.beneficios-next:hover {
+  color: var(--blanco) !important;
+}
+
 /*# sourceMappingURL=styles.css.map */

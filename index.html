@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Tipografías: Cormorant Garamond (display) + DM Sans (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,7 +43,7 @@
 <body>
 
     <!-- ===== NAVBAR ===== -->
-<!-- ===== NAVBAR index.html ===== -->
+    <!-- ===== NAVBAR index.html ===== -->
     <!-- ===== NAVBAR ===== -->
     <header>
         <nav class="navbar navbar-expand-lg miNav">
@@ -88,8 +90,9 @@
             <div class="hero-overlay"></div>
             <div class="hero-contenido">
                 <span class="hero-etiqueta">
-                <h1>Alma y vida studio pilates</h1>
-                Pilates Studio · Corrientes</span>
+                    <h1>Alma y vida studio pilates</h1>
+                    Pilates Studio · Corrientes
+                </span>
                 <p>Descubrí una nueva forma de conectar cuerpo y mente con clases diseñadas para cada nivel.</p>
                 <div class="hero-btns">
                     <a href="/pages/inscribite.html" class="btn-verde">Reservar clase</a>
@@ -118,7 +121,7 @@
                         <h3>Pilates Reformer</h3>
                         <p>Clases en máquina para mejorar fuerza, postura y control corporal con resistencia progresiva.
                         </p>
-                        
+
                     </div>
                 </article>
                 <article class="clase-card">
@@ -130,7 +133,7 @@
                         <h3>Pilates Mat</h3>
                         <p>Entrenamiento en colchoneta accesible para todos los niveles, enfocado en core y equilibrio.
                         </p>
-                        
+
                     </div>
                 </article>
                 <article class="clase-card">
@@ -146,6 +149,71 @@
 
             </div>
 
+        </section>
+
+        <!-- ===== CARRUSEL BENEFICIOS ===== -->
+        <section class="beneficios-seccion">
+            <div class="beneficios-header">
+                <span class="etiqueta">Para qué te sirve</span>
+                <h2>El pilates transforma tu cuerpo</h2>
+            </div>
+            <div class="swiper beneficios-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide beneficio-slide">
+                        <img src="./img/fodnoverde.jpg" alt="Recuperá tu fuerza con pilates" />
+                        <div class="beneficio-overlay">
+                            <span class="beneficio-numero">01</span>
+                            <h3>Recuperá tu fuerza</h3>
+                            <p>Ideal para quienes buscan volver a sentirse activos y vitales en cualquier etapa de la
+                                vida.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide beneficio-slide">
+                        <img src="./img/fodnoverde.jpg" alt="Corregí tu postura con pilates" />
+                        <div class="beneficio-overlay">
+                            <span class="beneficio-numero">02</span>
+                            <h3>Corregí tu postura</h3>
+                            <p>Trabajamos la alineación corporal para eliminar dolores y mejorar tu calidad de vida.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide beneficio-slide">
+                        <img src="./img/fodnoverde.jpg" alt="Corregí tu postura con pilates" />
+                        <div class="beneficio-overlay">
+                            <span class="beneficio-numero">02</span>
+                            <h3>Corregí tu postura</h3>
+                            <p>Trabajamos la alineación corporal para eliminar dolores y mejorar tu calidad de vida.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide beneficio-slide">
+                        <img src="./img/fodnoverde.jpg" alt="Fortalecé tu core con pilates" />
+                        <div class="beneficio-overlay">
+                            <span class="beneficio-numero">03</span>
+                            <h3>Fortalecé tu core</h3>
+                            <p>Un centro fuerte es la base de todo movimiento. Mejorá tu estabilidad y control corporal.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide beneficio-slide">
+                        <img src="./img/fodnoverde.jpg" alt="Fortalecé tu suelo pélvico con pilates" />
+                        <div class="beneficio-overlay">
+                            <span class="beneficio-numero">04</span>
+                            <h3>Fortalecé tu suelo pélvico</h3>
+                            <p>Especialmente recomendado en el embarazo y postparto. Cuidá tu cuerpo desde adentro.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide beneficio-slide">
+                        <img src="./img/fodnoverde.jpg" alt="Fortalecé tu suelo pélvico con pilates" />
+                        <div class="beneficio-overlay">
+                            <span class="beneficio-numero">04</span>
+                            <h3>Fortalecé tu suelo pélvico</h3>
+                            <p>Especialmente recomendado en el embarazo y postparto. Cuidá tu cuerpo desde adentro.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-prev beneficios-prev"></div>
+                <div class="swiper-button-next beneficios-next"></div>
+            </div>
         </section>
 
         <!-- ===== POR QUÉ ELEGIRNOS ===== -->
@@ -191,41 +259,67 @@
 
     </main>
 
-<footer id="contacto">
-    <div class="footer-contenido">
+    <footer id="contacto">
+        <div class="footer-contenido">
 
-        <div class="footer-datos">
-            <p class="footer-brand">Jimena Monzon</p>
-            <p>Instructora certificada de Pilates</p>
-            <p>Corrientes, Argentina</p>
-            <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <div class="footer-datos">
+                <p class="footer-brand">Jimena Monzon</p>
+                <p>Instructora certificada de Pilates</p>
+                <p>Corrientes, Argentina</p>
+                <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+
+            <div class="footer-nav">
+                <p class="footer-nav-titulo">Navegación</p>
+                <a href="../index.html">Inicio</a>
+                <a href="inscribite.html">Inscribite</a>
+                <a href="sobreMi.html">Sobre mí</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div class="footer-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114444.0!2d-58.83!3d-27.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456c0b0b0b0b0b%3A0x0!2sCorrientes%2C+Argentina!5e0!3m2!1ses!2sar!4v1"
+                    title="Ubicación del estudio en Corrientes" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
         </div>
 
-        <div class="footer-nav">
-            <p class="footer-nav-titulo">Navegación</p>
-            <a href="../index.html">Inicio</a>
-            <a href="inscribite.html">Inscribite</a>
-            <a href="sobreMi.html">Sobre mí</a>
-            <a href="contacto.html">Contacto</a>
+        <div class="footer-copy">
+            <p>&copy; 2026 Jimena Monzon — Pilates Studio · Corrientes</p>
+            <p>Desarrollado por <a href="mailto:manu.gomez.cap@gmail.com">Emanuel Gomez</a></p>
         </div>
 
-        <div class="footer-mapa">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114444.0!2d-58.83!3d-27.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456c0b0b0b0b0b%3A0x0!2sCorrientes%2C+Argentina!5e0!3m2!1ses!2sar!4v1"
-                title="Ubicación del estudio en Corrientes" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+    </footer>
 
-    </div>
-
-    <div class="footer-copy">
-        <p>&copy; 2026 Jimena Monzon — Pilates Studio · Corrientes</p>
-        <p>Desarrollado por <a href="mailto:manu.gomez.cap@gmail.com">Emanuel Gomez</a></p>
-    </div>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const beneficiosSwiper = new Swiper('.beneficios-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 120,
+                modifier: 2.5,
+                slideShadows: false,
+            },
+            navigation: {
+                nextEl: '.beneficios-next',
+                prevEl: '.beneficios-prev',
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
 </body>
+
 </html>
