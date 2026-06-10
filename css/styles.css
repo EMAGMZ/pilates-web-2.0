@@ -95,11 +95,12 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #f5f0eb !important;
+  background-image: url(/img/fondoNavb.png) !important;
   box-shadow: 0 1px 0 rgba(84, 71, 60, 0.1);
   padding: 14px 16px;
   z-index: 999;
   transition: background-color 0.3s ease;
+  box-shadow: 0 8px 24px rgb(51, 37, 26);
 }
 @media (min-width: 768px) {
   .miNav {
@@ -108,7 +109,7 @@ main {
 }
 .miNav .navbar-brand {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 4px;
   color: #33251A !important;
@@ -116,7 +117,7 @@ main {
 }
 @media (min-width: 768px) {
   .miNav .navbar-brand {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }
 .miNav .nav-link {
@@ -351,7 +352,7 @@ main {
 
 .clases-seccion {
   position: relative;
-  padding: 60px 16px;
+  padding: 80px 16px;
   background: url("/img/fondoclass.jpg") center center/cover no-repeat;
 }
 .clases-seccion::before {
@@ -378,7 +379,7 @@ main {
 }
 @media (min-width: 768px) {
   .clases-seccion {
-    padding: 80px 20px;
+    padding: 100px 40px;
   }
 }
 
@@ -406,112 +407,131 @@ main {
 
 .clases-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 70px;
-  max-width: 1500px;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .clases-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
 
 .clase-card {
-  background-color: var(--blanco);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 24px rgba(61, 90, 71, 0.1);
   position: relative;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 480px;
 }
-.clase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgb(51, 37, 26);
+.clase-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(26, 20, 16, 0.1) 0%, rgba(26, 20, 16, 0.7) 60%, rgba(26, 20, 16, 0.92) 100%);
+  z-index: 1;
+  transition: background 0.5s ease;
+}
+.clase-card:hover::before {
+  background: linear-gradient(to bottom, rgba(26, 20, 16, 0.2) 0%, rgba(26, 20, 16, 0.75) 50%, rgba(26, 20, 16, 0.95) 100%);
 }
 .clase-card:hover .clase-card-img img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
-.clase-card {
-  box-shadow: 0 8px 24px rgb(51, 37, 26);
+.clase-card:hover .clase-card-texto {
+  transform: translateY(-8px);
+}
+.clase-card:hover .clase-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 767px) {
+  .clase-card {
+    height: 380px;
+  }
 }
 
 .clase-card-img {
-  height: 340px;
-  overflow: hidden;
-  position: relative;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 .clase-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
-}
-.clase-card-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(26, 26, 26, 0.35) 100%);
+  transition: transform 0.7s ease;
 }
 
 .clase-card-etiqueta {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  background-color: var(--verde-bosque);
-  color: var(--blanco);
+  top: 20px;
+  left: 20px;
+  background-color: rgba(245, 240, 235, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 240, 235, 0.3);
+  color: #ffffff;
   font-family: "DM Sans", sans-serif;
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 2.5px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 20px;
-  z-index: 1;
+  padding: 6px 14px;
+  border-radius: 2px;
+  z-index: 2;
 }
 
 .clase-card-texto {
-  padding: 24px;
-  background-color: var(--blanco);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px;
+  z-index: 2;
+  transition: transform 0.4s ease;
 }
 .clase-card-texto h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
   letter-spacing: 0.3px;
-  color: var(--oscuro);
-  margin-bottom: 8px;
 }
 .clase-card-texto p {
   font-family: "DM Sans", sans-serif;
-  font-size: 0.88rem;
-  font-weight: 400;
-  color: var(--gris-texto);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.7;
   margin-bottom: 16px;
 }
-.clase-card-texto .clase-link {
+
+.clase-link {
+  display: inline-block;
   font-family: "DM Sans", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--verde-bosque);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #BA9B81;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  border-bottom: 1px solid var(--verde-bosque);
-  padding-bottom: 2px;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  letter-spacing: 2.5px;
+  border-bottom: 1px solid rgba(186, 155, 129, 0.5);
+  padding-bottom: 3px;
+  opacity: 0.7;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
-.clase-card-texto .clase-link:hover {
-  color: var(--nude);
-  border-color: var(--nude);
+.clase-link:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
 }
 
-@media (max-width: 600px) {
-  .clases-grid {
-    grid-template-columns: 1fr;
-  }
-  .clase-card-img {
-    height: 400px;
-  }
-}
 :root {
   --verde-bosque: #54473C;
   --verde-medio: #877F78;
@@ -651,6 +671,7 @@ main {
   color: var(--nude);
   border-color: var(--nude);
   opacity: 0.7;
+  font-size: 1rem;
 }
 .porque-texto h2 {
   font-family: "Cormorant Garamond", serif;

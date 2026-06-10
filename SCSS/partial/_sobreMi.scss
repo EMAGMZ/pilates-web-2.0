@@ -116,7 +116,7 @@ display: grid;
 grid-template-columns: 1fr;
 gap: 60px;
 max-width: 1100px;
- margin: 0 auto;
+margin: 0 auto;
 
 @media (min-width: 768px) {
     grid-template-columns: 1fr 1.6fr;
@@ -130,6 +130,7 @@ max-width: 1100px;
     color: var(--nude);
     border-color: var(--nude);
     opacity: 0.7;
+    font-size: 1rem;
 }
 
 h2 {

@@ -7,11 +7,12 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #f5f0eb !important;
+    background-image: url(/img/fondoNavb.png) !important;
     box-shadow: 0 1px 0 rgba(84, 71, 60, 0.1);
     padding: 14px 16px;
     z-index: 999;
     transition: background-color 0.3s ease;
+    box-shadow: 0 8px 24px rgba(51, 37, 26, 50);
 
     @media (min-width: 768px) {
         padding: 18px 32px;
@@ -19,14 +20,14 @@
 
     .navbar-brand {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         font-weight: 600;
         letter-spacing: 4px;
         color: #33251A !important;
         text-transform: uppercase;
 
         @media (min-width: 768px) {
-            font-size: 1.2rem;
+            font-size: 2rem;
         }
     }
 
