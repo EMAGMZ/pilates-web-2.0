@@ -6,7 +6,7 @@
 .clases-seccion {
     position: relative;
     padding: 80px 16px;
-    background: url('/img/fondoclass.jpg') center center / cover no-repeat;
+    background: url('../img/fondoclass.jpg') center center / cover no-repeat;
 
     &::before {
         content: '';

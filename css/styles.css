@@ -95,7 +95,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  background-image: url(/img/fondoNavb.png) !important;
+  background-image: url(../img/fondoNavb.png) !important;
   box-shadow: 0 1px 0 rgba(84, 71, 60, 0.1);
   padding: 14px 16px;
   z-index: 999;
@@ -187,7 +187,7 @@ main {
   position: relative;
   height: 100svh;
   min-height: 500px;
-  background: url("/img/cabeceraImgPC.png") center 30%/cover no-repeat;
+  background: url("../img/cabeceraImgPC.png") center 30%/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,7 +353,7 @@ main {
 .clases-seccion {
   position: relative;
   padding: 80px 16px;
-  background: url("/img/fondoclass.jpg") center center/cover no-repeat;
+  background: url("../img/fondoclass.jpg") center center/cover no-repeat;
 }
 .clases-seccion::before {
   content: "";
