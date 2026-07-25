@@ -1,0 +1,9 @@
+.git
+.gitignore
+.assetsignore
+.claude
+SCSS
+README.md
+*.map
+node_modules
+wrangler.jsonc
