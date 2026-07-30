@@ -47,7 +47,7 @@
         <nav class="navbar navbar-expand-lg miNav">
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="../index.html">Jimena Monzon</a>
+                <a class="navbar-brand" href="index.html">Jimena Monzon</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
@@ -57,7 +57,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Inicio</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/inscribite.html">Inscribite</a>
@@ -93,8 +93,8 @@
                 </span>
                 <p>Descubrí una nueva forma de conectar cuerpo y mente con clases diseñadas para cada nivel.</p>
                 <div class="hero-btns">
-                    <a href="/pages/inscribite.html" class="btn-verde">Reservar clase</a>
-                    <a href="pages/clases.html" class="btn-secundario">Ver clases</a>
+                    <a href="./pages/inscribite.html" class="btn-verde">Reservar clase</a>
+                    <!-- <a href="./pages/clases.html" class="btn-secundario">Ver clases</a> -->
                 </div>
             </div>
             <div class="hero-scroll" aria-hidden="true">Scroll</div>
@@ -285,31 +285,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const beneficiosSwiper = new Swiper('.beneficios-swiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 120,
-                modifier: 2.5,
-                slideShadows: false,
-            },
-            navigation: {
-                nextEl: '.beneficios-next',
-                prevEl: '.beneficios-prev',
-            },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 
 </html>
