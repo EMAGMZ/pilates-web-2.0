@@ -109,16 +109,11 @@ main {
 }
 .miNav .navbar-brand {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
   font-weight: 600;
   letter-spacing: 4px;
   color: #33251A !important;
   text-transform: uppercase;
-}
-@media (min-width: 768px) {
-  .miNav .navbar-brand {
-    font-size: 2rem;
-  }
 }
 .miNav .nav-link {
   font-family: "DM Sans", sans-serif;
@@ -231,26 +226,23 @@ main {
     margin-bottom: 24px;
   }
 }
+@media (min-width: 1200px) {
+  .hero-contenido .hero-etiqueta {
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+    margin-bottom: 28px;
+  }
+}
 .hero-contenido h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.6rem;
+  font-size: clamp(2.6rem, 2rem + 4vw, 5.5rem);
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 16px;
 }
-@media (min-width: 768px) {
-  .hero-contenido h1 {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .hero-contenido h1 {
-    font-size: 5.5rem;
-  }
-}
 .hero-contenido p {
   font-family: "DM Sans", sans-serif;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 0.75rem + 1vw, 1.1rem);
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 28px;
   line-height: 1.7;
@@ -260,7 +252,6 @@ main {
 }
 @media (min-width: 768px) {
   .hero-contenido p {
-    font-size: 1.1rem;
     margin-bottom: 36px;
   }
 }
@@ -614,20 +605,10 @@ main {
 }
 .sobre-preview-texto h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.5rem + 2vw, 2.8rem);
   font-weight: 400;
   color: var(--blanco);
   line-height: 1.2;
-}
-@media (min-width: 768px) {
-  .sobre-preview-texto h2 {
-    font-size: 2.4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .sobre-preview-texto h2 {
-    font-size: 2.8rem;
-  }
 }
 .sobre-preview-texto p {
   font-family: "DM Sans", sans-serif;
@@ -829,7 +810,7 @@ main {
 }
 .contInscripcion h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.3rem + 3vw, 2.8rem);
   font-weight: 400;
   color: var(--oscuro);
   margin-bottom: 32px;
@@ -837,7 +818,6 @@ main {
 }
 @media (min-width: 768px) {
   .contInscripcion h1 {
-    font-size: 2.8rem;
     margin-bottom: 48px;
   }
 }
@@ -981,17 +961,12 @@ footer {
 
 .footer-brand {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.4rem);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--nude-claro);
   margin-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .footer-brand {
-    font-size: 1.4rem;
-  }
 }
 
 .footer-datos {
@@ -1093,15 +1068,10 @@ footer {
 }
 .contacto-header h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 1.3rem + 3vw, 2.8rem);
   font-weight: 400;
   color: var(--oscuro);
   margin-bottom: 12px;
-}
-@media (min-width: 768px) {
-  .contacto-header h1 {
-    font-size: 2.8rem;
-  }
 }
 .contacto-header p {
   font-family: "DM Sans", sans-serif;
