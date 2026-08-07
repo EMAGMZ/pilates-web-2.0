@@ -8,6 +8,11 @@ const formulario = document.querySelector('.formPilates');
 formulario.addEventListener('submit', async function (e) {
     e.preventDefault();
 
+    if (!formulario.checkValidity()) {
+        formulario.reportValidity();
+        return;
+    }
+
     const datos = {
         nombre: document.getElementById('nombre').value,
         email: document.getElementById('email').value,

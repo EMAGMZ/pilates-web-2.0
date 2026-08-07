@@ -57,7 +57,7 @@
 
             <h1>Inscripción a Clases de Pilates</h1>
 
-            <form class="formPilates" action="#" method="POST" novalidate>
+            <form class="formPilates" action="#" method="POST">
 
                 <div class="form-grupo">
                     <label for="nombre">Nombre completo</label>
@@ -91,9 +91,10 @@
                 </div>
 
                 <div class="form-grupo">
-                    <label for="patologia">Patología, lesiones, etc. <span>(opcional)</span></label>
+                    <label for="patologia">Patología, lesiones, etc.</label>
                     <textarea id="patologia" name="patologia" rows="4"
-                        placeholder="Contanos si tenés alguna lesión o consulta"></textarea>
+                        placeholder="Contanos si tenés alguna lesión o consulta. Si no tenés, escribí 'Ninguna'"
+                        required></textarea>
                 </div>
 
                 <button type="submit">Inscribirme</button>
