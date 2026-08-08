@@ -15,6 +15,7 @@ formulario.addEventListener('submit', async function (e) {
 
     const datos = {
         nombre: document.getElementById('nombre').value,
+        dni: document.getElementById('dni').value,
         email: document.getElementById('email').value,
         telefono: document.getElementById('telefono').value,
         edad: document.getElementById('edad').value,
